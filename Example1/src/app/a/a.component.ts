@@ -20,9 +20,24 @@ export class AComponent {
   id = 0
   name = "no name"
   email = "no email"
+   uname = ""
+  uemail = ""
   addUser(){
    var user :User = new User(this.id, this.name, this.email)
    this.service.users.push(user)
 
   }
+
+  updateUser(){
+
+    var result   = this.service.getUserById(this.id)
+    if (result){
+      result.name = this.uname
+      result.email = this.uemail
+    }else{
+      alert("invalid user id")
+    }
+    
+ 
+   }
 }

@@ -17,4 +17,13 @@ export class DataService {
   getUser(): User{
     return this.user
   }
+  getUserById(id: number) {
+
+  var user  = this.users.filter(u => u.id == id)
+  if (typeof user === 'undefined') {
+    return null;
+    }
+    return user[0];
+   } 
+  
 }

@@ -1,0 +1,11 @@
+
+<h1> Welcome to {{title }}</h1>
+
+<input type="text" [(ngModel)]="parentMessage" />
+
+<p> {{message}}</p>
+<div class="row">
+  <div class="col bga"> <app-a></app-a>  </div>
+  <div class=" col bgb"> <app-b [message]="parentMessage"></app-b> </div>
+</div>
+

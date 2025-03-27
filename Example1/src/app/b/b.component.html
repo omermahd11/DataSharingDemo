@@ -1,2 +1,16 @@
 <p>b works!</p>
 {{message}}
+
+<Button (click)="getData()"> Display User Info</Button>
+
+<h2>User Info</h2>
+
+<p> {{user.id}}</p>
+<p> {{user.name}}</p>
+<p> {{user.email}}</p>
+
+<h2> List of users</h2>
+@for( u of users; track u.id){
+    <p> {{u.id}} : {{u.name}} : {{u.email}}</p>
+}
+    

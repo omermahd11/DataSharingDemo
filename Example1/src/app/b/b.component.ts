@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { DataService } from '../data.service';
+import { User } from '../../User';
 
 @Component({
   selector: 'app-b',
@@ -16,4 +17,15 @@ export class BComponent {
  constructor (service : DataService){
   this.service = service
  }
+
+ user : User =  new User(10,"", "")
+
+ users :User[] = []
+
+ getData(){
+  this.user = this.service.getUser()
+  this.users = this.service.users
+ }
+
+
 }
